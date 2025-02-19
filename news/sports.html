@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 15px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .sports-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .sports-table th, .sports-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .sports-table th {
+            background-color: #333;
+            color: white;
+        }
+         marquee {
+            font-size: 20px;
+            font-weight: bold;
+            background-color: yellow;
+            padding: 5px;
+         }
+    </style>
+</head>
+<body>
+    <header>Sports News</header>
+      <marquee behavior="scroll" direction="left">Welcome to National Sports News Portal..!</marquee>
+    <div class="container">
+        <div class="card">
+            <img src="C:/DLithe/news/image/cricket.jpg" alt="Cricket">
+            <h2>Cricket</h2>
+            <p>ICC Champions Trophy 2025 returns after eight years. India’s matches are in UAE due to political tensions.</p>
+        </div>
+        <div class="card">
+            <img src="C:/DLithe/news/image/football.jpg" alt="Football">
+            <h2>Football</h2>
+            <p>Liverpool faces Aston Villa at 11:30 AM PST.</p>
+        </div>
+        <div class="card">
+            <img src="C:\DLithe\news\image\hockey.jpeg" alt="Hockey">
+            <h2>Hockey</h2>
+            <p>Punjab govt appoints hockey captains to Punjab Police Service.</p>
+        </div>
+        <div class="card">
+            <img src="C:\DLithe\news\image\kabaddi.jpeg" alt="Kabaddi">
+            <h2>Kabaddi</h2>
+            <p>Indian players nominated for TOISA 2024.</p>
+        </div>
+    </div>
+
+    <table class="sports-table">
+        <tr>
+            <th>Sport</th>
+            <th>News Update</th>
+        </tr>
+        <tr>
+            <td>Cricket</td>
+            <td>ICC Champions Trophy 2025 returns, India’s matches in UAE.</td>
+        </tr>
+        <tr>
+            <td>Football</td>
+            <td>Liverpool vs Aston Villa at 11:30 AM PST.</td>
+        </tr>
+        <tr>
+            <td>Hockey</td>
+            <td>Punjab govt appoints hockey captains to Punjab Police Service.</td>
+        </tr>
+        <tr>
+            <td>Kabaddi</td>
+            <td>Indian players nominated for TOISA 2024.</td>
+        </tr>
+    </table>
+      <footer>
+        <p>&copy; 2025 India News Portal | All Rights Reserved | Contact: info@indianews.com</p>
+    </footer>
+   
+</body>
+</html>

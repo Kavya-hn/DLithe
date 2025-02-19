@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>National News Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('file:///C:/DLithe/news/image/news1.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #eef1f7;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        header:hover {
+            background-color: #555;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #444;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            padding: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            
+            background: white;
+            padding: 20px;
+            margin: 15px;
+            width: 95%;
+            height: 30%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+        marquee {
+            font-size: 20px;
+            font-weight: bold;
+            background-color: yellow;
+            padding: 5px;
+       
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>National News Portal</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="C:/DLithe/news/home1.html">Home</a></li>
+            <li><a href="C:\DLithe\news\sports.html">Sports</a></li>
+            <li><a href="C:\DLithe\news\entertainment.html">Entertainment</a></li>
+            <li><a href="C:/DLithe/website/Assigment2-Website.html">Tourism</a></li>
+            <li><a href="C:\DLithe\news\technology.html">Technology</a></li>
+            <li><a href="C:\DLithe\news\contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <marquee behavior="scroll" direction="left">Welcome to National News Portal..!</marquee>
+    <div align="center">
+        <div class="card">
+            <img src="C:\DLithe\news\image\news8.jpg" alt="Politics">
+            <h2>Indian Politics</h2>
+            <p>Lok Sabha elections in April-May, key alliances form; Union Budget 2025 on Feb 1 with major reforms expected.</p>
+        </div>
+    </div>
+    <div align="center">
+        <div class="card">
+            <img src="C:\DLithe\news\image\news7.jpg" alt="General News">
+            <h2>Other News</h2>
+            <p>Cold wave grips North India, Delhi schools shut; ISRO preps Chandrayaan-4; Sensex surges past 75,000.</p>
+        </div>
+
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <img src="C:\DLithe\news\image\news5.jpeg" alt="Breaking News">
+            <h2>Breaking News</h2>
+            <p>India's Economic Growth Surges with a 7.8% GDP increase...</p>
+        </div>
+
+        <div class="card">
+            <img src="C:\DLithe\news\image\news6.jpeg" alt="Cricket">
+            <h2>Cricket</h2>
+            <p>India clinches T20 series against Australia in a thrilling last-over victory...</p>
+        </div>
+
+        <div class="card">
+            <img src="C:\DLithe\news\image\news9.jpeg" alt="Bollywood">
+            <h2>Movies</h2>
+            <p>"Dragon" (Tamil) releases Feb 21, "Pushpa 2" streams on Netflix Feb 5</p>
+        </div>
+</div>
+
+    <marquee behavior="scroll" direction="right">Welcome to National News Portal..!</marquee>
+    <br>
+
+    <footer>
+        <p>&copy; 2025 India News Portal | All Rights Reserved | Contact: info@indianews.com</p>
+    </footer>
+
+</body>
+</html>
