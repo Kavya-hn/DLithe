@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subscription Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f7;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pay-button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pay-button:hover {
+            background-color: darkgreen;
+        }
+        #thank-you {
+            display: none;
+        }
+        #thank-you:target {
+            display: block;
+        }
+        #payment-form:target {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="payment-form" class="container">
+        <h2>Subscribe to National News Portal</h2>
+        <p>Get daily updates and stay informed!</p>
+        
+        <label for="plan">Subscription Plan</label>
+        <select id="plan" required>
+            <option value="daily">Daily - ₹1/day</option>
+            <option value="monthly">Monthly - ₹20/month</option>
+            <option value="yearly">Yearly - ₹200/year</option>
+        </select>
+
+        <h3>Scan the QR code to complete payment</h3>
+        <img src="C:\DLithe\news\image\QR.png" alt="Payment QR Code" style="width: 100%; max-width: 250px;">
+
+        <p>After scanning, follow the instructions to complete your subscription payment.</p>
+
+        <a href="#thank-you" class="pay-button">Done</a>
+    </div>
+
+    <div id="thank-you" class="container">
+        <h2>Thank You!</h2>
+        <p>Your payment was successful.</p>
+        <p>Enjoy your subscription to National News Portal.</p>
+    </div>
+
+</body>
+</html>

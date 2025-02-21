@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>National News Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('file:///C:/DLithe/news/image/news1.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #eef1f7;
+            text-align: center;
+        }
+        .advertisement {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: yellow;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeOut 5s ease-in-out 3s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+        .close-ad {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .close-ad:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="advertisement" id="travelAd">
+        <h2>Explore the World!</h2>
+        <p>Book your dream vacation now with amazing discounts on flights and hotels.</p>
+        <a href="#" class="close-ad">Close</a>
+    </div>
+</body>
+</html>

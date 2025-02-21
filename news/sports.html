@@ -18,6 +18,35 @@
             padding: 20px;
             font-size: 24px;
         }
+         .advertisement {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: yellow;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeOut 5s ease-in-out 3s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+        .open-ad {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .open-ad:hover {
+            background: darkred;
+        }
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -29,7 +58,7 @@
             padding: 15px;
             margin: 15px;
             width: 300px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(235, 18, 18, 0.8);
             border-radius: 10px;
             text-align: left;
         }
@@ -58,9 +87,11 @@
          marquee {
             font-size: 20px;
             font-weight: bold;
-            background-color: yellow;
+            background-color: white;
             padding: 5px;
-         }
+            color:red;
+       
+        }
     </style>
 </head>
 <body>
@@ -87,6 +118,13 @@
             <h2>Kabaddi</h2>
             <p>Indian players nominated for TOISA 2024.</p>
         </div>
+    </div>
+
+    <div class="advertisement" id="travelAd">
+        <p><h3>You Know What?</h3></p>
+        <h2><a href="C:\DLithe\website\index.html" >Karnataka Travellers</a></h2>   
+        <p>Book your dream vacation places in Karnataka ,now with amazing discounts .</p>
+        <a href="C:\DLithe\website\index.html" class="open-ad">Tourism</a>
     </div>
 
     <table class="sports-table">
