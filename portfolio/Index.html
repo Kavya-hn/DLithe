@@ -8,7 +8,7 @@
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9;">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #1E3A8A; color: white;">
         <div style="display: flex; align-items: center;">
-            <img src="C:\DLithe\portfolio\kavyahn.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+            <img id="profile-pic" src="C:\DLithe\portfolio\kavyahn.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; cursor: pointer;">
             <h1 style="margin: 0; font-size: 24px;">Kavya H N</h1>
         </div>
         <div>
@@ -20,9 +20,8 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 30px; height: 30px; vertical-align: middle;"> LinkedIn
             </a>
             <a href="https://github.com" target="_blank" style="margin-right: 10px; color: white; text-decoration: none;">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="LinkedIn" style="width: 30px; height: 30px; vertical-align: middle;"> GitHUB
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 30px; height: 30px; vertical-align: middle;"> GitHub
             </a>
-
         </div>
     </header>
 
@@ -45,22 +44,22 @@
 
     <section style="text-align: center; padding: 40px;">
         <h2>Skills</h2>
-        <div style="display: flex; justify-content: center; gap: 10px;">
-            <span style="background: #2563EB; color: white; padding: 10px 20px; border-radius: 5px;">HTML</span>
-            <span style="background: #F97316; color: white; padding: 10px 20px; border-radius: 5px;">CSS</span>
-            <span style="background: #EAB308; color: black; padding: 10px 20px; border-radius: 5px;">JavaScript</span>
-            <span style="background: #9333EA; color: white; padding: 10px 20px; border-radius: 5px;">Java</span>
+        <div id="skills" style="display: flex; justify-content: center; gap: 10px;">
+            <span class="skill" style="background: #2563EB; color: white; padding: 10px 20px; border-radius: 5px;">HTML</span>
+            <span class="skill" style="background: #F97316; color: white; padding: 10px 20px; border-radius: 5px;">CSS</span>
+            <span class="skill" style="background: #EAB308; color: black; padding: 10px 20px; border-radius: 5px;">JavaScript</span>
+            <span class="skill" style="background: #9333EA; color: white; padding: 10px 20px; border-radius: 5px;">Java</span>
         </div>
     </section>
 
     <section style="text-align: center; padding: 40px;">
         <h2>Projects</h2>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <div style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center;">
+            <div class="project" style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center; cursor: pointer;">
                 <img src="C:\DLithe\portfolio\news.jpeg" alt="News Portal" style="width: 100%; height: auto; border-radius: 10px;">
                 <p><a href="C:\DLithe\news\index.html" style="text-decoration: none; color: black;">News Portal</a></p>
             </div>
-            <div style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center;">
+            <div class="project" style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center; cursor: pointer;">
                 <img src="C:\DLithe\portfolio\travel.jpeg" alt="Travel Website" style="width: 100%; height: auto; border-radius: 10px;">
                 <p><a href="C:\DLithe\website\index.html" style="text-decoration: none; color: black;">Travel Website</a></p>
             </div>
@@ -72,5 +71,32 @@
         <p>&#9990; 8197228526</p>
         <p>&#9993; kavyakavyahn8@gmail.com</p>
     </section>
+
+    <script>
+        window.onload = function() {
+            alert('Welcome to my portfolio!');
+        };
+
+        document.getElementById('profile-pic').addEventListener('click', function() {
+            alert('Hello! This is Kavya H N. Thanks for visiting my portfolio.');
+        });
+
+        let skills = document.querySelectorAll('.skill');
+        skills.forEach(skill => {
+            skill.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            skill.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        let projects = document.querySelectorAll('.project');
+        projects.forEach(project => {
+            project.addEventListener('click', function() {
+                alert('You clicked on a project!');
+            });
+        });
+    </script>
 </body>
 </html>

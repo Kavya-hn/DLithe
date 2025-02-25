@@ -31,7 +31,7 @@
         header:hover {
             background-color: #555;
         }
-         .top-right-corner {
+        .top-right-corner {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -40,12 +40,6 @@
         .top-right-corner a {
             text-decoration: none;
             color: yellow;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        .login-link {
-            text-decoration: none;
-            color: white;
             font-size: 16px;
             margin-bottom: 5px;
         }
@@ -89,7 +83,6 @@
             padding: 20px;
         }
         .card {
-            
             background: white;
             padding: 20px;
             margin: 15px;
@@ -108,7 +101,7 @@
             transform: scale(1.05);
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
-                 .advertisement {
+        .advertisement {
             position: relative;
             width: 80%;
             margin: 20px auto;
@@ -123,20 +116,13 @@
             0% { opacity: 1; }
             100% { opacity: 0; visibility: hidden; }
         }
-        .open-ad {
-            display: block;
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .open-ad:hover {
-            background: darkred;
-        }
+          select#newsFilter {
+        background-color: #444;
+        color: white; 
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
         footer {
             background-color: #222;
             color: white;
@@ -151,20 +137,18 @@
             font-weight: bold;
             background-color: white;
             padding: 5px;
-            color:red;
-       
+            color: red;
         }
     </style>
 </head>
 <body>
-     <header>
+    <header>
         <h1 style="margin-left: 20px;">National News Portal</h1>
         <div class="top-right-corner">
             <a href="C:\DLithe\news\register.html" class="login-link">Login</a>
             <button class="subscribe-button"><a href="C:\DLithe\news\payment.html">Subscribe</a></button>
         </div>
     </header>
-    
 
     <nav>
         <ul>
@@ -177,56 +161,67 @@
         </ul>
     </nav>
 
+  
+    <div style="text-align: center; margin: 20px;">
+        <label for="newsFilter"></label>
+        <select id="newsFilter" onchange="filterNews()">
+            <option value="all">Know about in one tap</option>
+            <option value="politics">Politics</option>
+            <option value="general">General News</option>
+            <option value="breaking">Breaking News</option>
+            <option value="sports">Cricket</option>
+            <option value="movies">Movies</option>
+        </select>
+    </div>
+
     <marquee behavior="scroll" direction="left">Welcome to National News Portal..!</marquee>
-    <div align="center">
-        <div class="card">
+
+    <div class="container">
+        <div class="card" data-category="politics">
             <img src="C:\DLithe\news\image\news8.jpg" alt="Politics">
             <h2>Indian Politics</h2>
             <p>Lok Sabha elections in April-May, key alliances form; Union Budget 2025 on Feb 1 with major reforms expected.</p>
         </div>
-    </div>
-    <div align="center">
-        <div class="card">
+
+        <div class="card" data-category="general">
             <img src="C:\DLithe\news\image\news7.jpg" alt="General News">
             <h2>Other News</h2>
             <p>Cold wave grips North India, Delhi schools shut; ISRO preps Chandrayaan-4; Sensex surges past 75,000.</p>
         </div>
 
-    </div>
-    
-    <div class="advertisement" id="travelAd">
-        <p><h3>You Know What?</h3></p>
-        <h2><a href="C:\DLithe\website\index.html" >Karnataka Travellers</a></h2>   
-        <p>Book your dream vacation places in Karnataka ,now with amazing discounts .</p>
-        <a href="C:\DLithe\website\index.html" class="open-ad">Tourism</a>
-    </div>
-    
-    <div class="container">
-        <div class="card">
+        <div class="card" data-category="breaking">
             <img src="C:\DLithe\news\image\news5.jpeg" alt="Breaking News">
             <h2>Breaking News</h2>
             <p>India's Economic Growth Surges with a 7.8% GDP increase...</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="sports">
             <img src="C:\DLithe\news\image\news6.jpeg" alt="Cricket">
             <h2>Cricket</h2>
             <p>India clinches T20 series against Australia in a thrilling last-over victory...</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="movies">
             <img src="C:\DLithe\news\image\news9.jpeg" alt="Bollywood">
             <h2>Movies</h2>
             <p>"Dragon" (Tamil) releases Feb 21, "Pushpa 2" streams on Netflix Feb 5</p>
         </div>
-</div>
+    </div>
 
-    <marquee behavior="scroll" direction="right">Welcome to National News Portal..!</marquee>
-    <br>
+    <script>
+        function filterNews() {
+            let filterValue = document.getElementById("newsFilter").value.toLowerCase();
+            let newsCards = document.querySelectorAll(".card");
+
+            newsCards.forEach(card => {
+                let category = card.getAttribute("data-category");
+                card.style.display = (filterValue === "all" || category === filterValue) ? "block" : "none";
+            });
+        }
+    </script>
 
     <footer>
         <p>&copy; 2025 India News Portal | All Rights Reserved | Contact: info@indianews.com</p>
     </footer>
-
 </body>
 </html>

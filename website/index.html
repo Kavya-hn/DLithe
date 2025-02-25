@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karnataka Travellers</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" > </script>
 </head>
 <body>
     <header>
@@ -20,6 +21,17 @@
         </nav>
     </header>
     
+    <div style="text-align: center; margin: 20px;">
+        <label for="websiteFilter"></label>
+        <select id="websiteFilter" onchange="filterWebsite()">
+            <option value="all">Know about in one tap</option>
+            <option value="costal karnataka">costal karnataka</option>
+            <option value="north karnataka">north karnataka</option>
+            <option value="south karnataka">south karnataka</option>
+        </select>
+    </div>
+    
+   
     <section class="hero">
         <h2>Explore the Beauty of Karnataka</h2>
         <p>Discover breathtaking landscapes, historical landmarks, and vibrant culture.</p>
@@ -27,28 +39,41 @@
     
     <marquee behavior="scroll" direction="left">Welcome to Karnataka Travellers - Your Gateway to Adventure!</marquee>
     
-    <section class="card-section">
-        <div class="card">
+   <section class="card-section">
+   
+        <div class="card" data-category="Coastal Karnataka" onclick="showMessage('Coastal Karnataka offers serene beaches and historic temples!')">
             <img src="image/costal.jpg" alt="Coastal Karnataka">
             <h3>Coastal Karnataka</h3>
             <p>Experience the serene beaches, rich heritage, and famous temples of Udupi, Gokarna, and Murudeshwar.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="North Karnataka" onclick="showMessage('Explore the wonders of Hampi, Badami, and Dandeli!')">
             <img src="image/north.jpg" alt="North Karnataka">
             <h3>North Karnataka</h3>
             <p>Explore UNESCO sites like Hampi, Badami, and the adventure-filled forests of Dandeli.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="South Karnataka" onclick="showMessage('Visit Mysuru, Coorg, and Chikkamagaluru for breathtaking views!')">
             <img src="image/south.jpg" alt="South Karnataka">
             <h3>South Karnataka</h3>
             <p>Discover the beauty of Mysuru, Coorg, and Chikkamagaluru with lush hills and coffee plantations.</p>
         </div>
     </section>
-    <div class="advertisement" id="travelAd">
-        <p><h3>You Know What?</h3></p>
-        <h2><a href="C:\DLithe\news\index.html" >National News Portal </a></h2>   
-        <p>Easy to connect and get Informated, develop the knowledge about places Country and Sports etc.,.</p>
-        <a href="C:\DLithe\news\index.html" class="open-ad">Todays News</a>
+    <div id="messageBox" class="message-box" style="display: none;">
+        <div class="message-content">
+            <span class="close" onclick="closeMessage()">&times;</span>
+            <p id="messageText"></p>
+        </div>
+    </div>
+     
+    
+    <div id="adPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeAd">&times;</span>
+            <h2>Explore Karnataka!</h2>
+            <video controls>
+                <source src="travel-ad.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
     <section class="highlights">
         <h2>Top Attractions</h2>

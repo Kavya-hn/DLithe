@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<br>
-    <marquee>Your registration under Costal Karnataka.</marquee>
-<br>
+    <marquee>Your registration under Coastal Karnataka.</marquee>
     <div class="container">
         <h2>Karnataka Travellers Registration Form</h2>
-<br>
         <div class="destination-banner">
-            <img id="destinationImage" src="C:\DLithe\website\image\costal.jpg" alt="Costal Karnataka">
+            <img id="destinationImage" src="C:\DLithe\website\image\costal.jpg" alt="Coastal Karnataka">
         </div>
 
-        <form action="submit.php" method="POST">
+        <form action="submit.php" method="POST" onsubmit="validateForm(event)">
             <fieldset>
                 <legend>Personal Information</legend>
                 <label for="full_name">Full Name:</label>
@@ -45,25 +42,22 @@
 
             <fieldset>
                 <legend>Destination Details</legend>
-
                 <label for="destination">Select Destination:</label>
-                <select id="destination" name="destination" required>
-                <option value="">Costal Katnataka</option>
-                <option value="C:/DLithe/website/register1.html?place=Gokarna">Gokarna</option>
-                <option value="C:/DLithe/website/register1.html?place=Udupi">Udupi</option>
-                <option value="C:/DLithe/website/register1.html?place=Murudeshwar">Murudeshwar</option>
-                <option value="C:/DLithe/website/register1.html?place=Karwar">Karwar</option>
+                <select id="destination" name="destination" onchange="updateImage()" required>
+                    <option value="">Select a destination</option>
+                    <option value="Gokarna">Gokarna</option>
+                    <option value="Udupi">Udupi</option>
+                    <option value="Murudeshwar">Murudeshwar</option>
+                    <option value="Karwar">Karwar</option>
                 </select>
 
                 <label for="package_price">Package Price:</label>
                 <input type="text" id="package_price" name="package_price" required>
             </fieldset>
 
-             <button type="submit"><a href="C:\DLithe\website\tourpackages.html">Register</a></button>
-<br>
-<marquee>Thank you for selecting Karnataka Travellers</marquee>
-<br>
+            <button type="submit">Register</button>
         </form>
     </div>
+    <marquee>Thank you for selecting Karnataka Travellers</marquee>
 </body>
 </html>
