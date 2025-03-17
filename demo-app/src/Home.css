@@ -1,0 +1,102 @@
+.home {
+    padding: 20px;
+    text-align: center;
+    background-color: #eef5f9;  /* Light blue-gray background */
+    min-height: 100vh;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 2px solid #126e82;  /* Teal border */
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #126e82;  /* Dark teal */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.search-bar button:hover {
+    background-color: #219ebc;  /* Brighter teal */
+    transform: scale(1.05);
+}
+
+/* Account Cards */
+.account-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    text-align: center;
+    border-left: 5px solid #023047; /* Dark teal left border */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #023047; /* Dark teal */
+    margin-bottom: 10px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #023047; /* Dark teal */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+    background-color: #219ebc; /* Teal */
+    transform: scale(1.05);
+}
+
+/* Sticky Advertisement */
+.sticky-ad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffb703;  /* Gold for premium look */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: #023047;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.sticky-ad:hover {
+    transform: scale(1.1);
+}
+

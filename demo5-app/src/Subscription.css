@@ -1,0 +1,36 @@
+.subscription-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .subscription-container h2 {
+    color: #1db954;
+  }
+  
+  .subscription-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subscription-container li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .back-btn {
+    background: #1db954;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .back-btn:hover {
+    background: #17a349;
+  }
+  

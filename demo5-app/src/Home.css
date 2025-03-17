@@ -1,0 +1,253 @@
+
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: fixed;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #121212;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  header input {
+    flex: 1;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background-color: #242424;
+    color: white;
+  }
+  
+  header input::placeholder {
+    color: #888;
+  }
+  
+  header button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  header button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+  }
+  
+  /* Main Content */
+  main {
+    margin-top: 80px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  /* Dropdown */
+  select {
+    background-color: #fff;
+    color: black;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  /* Song List */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242424;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 48%;
+    box-sizing: border-box;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  li:hover {
+    background-color: #1e1e1e;
+    transform: scale(1.02);
+  }
+  
+  li span {
+    font-size: 18px;
+  }
+  
+  li button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  li button:hover {
+    background-color: #1ed760;
+    transform: scale(1.1);
+  }
+  
+  /* Liked Songs Section */
+  .liked-songs {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .liked-songs h2 {
+    text-align: center;
+  }
+  
+  .liked-songs input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .liked-songs input::placeholder {
+    color: #bbb;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+  }
+  
+ 
+  .subscription-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #121212;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .subscription-section p {
+    font-size: 16px;
+    color: #bbb;
+  }
+  
+  .subscribe-btn {
+    background-color: #1db954;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+    }
+    
+    header input {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    li {
+      width: 100%;
+    }
+  
+    .liked-songs,
+    .subscription-section {
+      width: 95%;
+    }
+  }
+  

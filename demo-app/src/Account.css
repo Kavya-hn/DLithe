@@ -1,0 +1,87 @@
+/* Account Page Styles */
+.account-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Account Header */
+.account-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #023047; /* Dark Blue */
+    text-transform: uppercase;
+}
+
+/* Account List */
+.account-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Account Card */
+.account-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Title */
+.account-card h3 {
+    color: #126e82; /* Teal */
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+/* Card Description */
+.account-card p {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Open Account Button */
+.open-account-btn {
+    background: linear-gradient(135deg, #126e82, #023047); /* Teal Gradient */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.open-account-btn:hover {
+    background: linear-gradient(135deg, #219ebc, #126e82);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .account-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-card {
+        width: 90%;
+    }
+}

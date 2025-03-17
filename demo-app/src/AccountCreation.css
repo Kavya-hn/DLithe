@@ -1,0 +1,72 @@
+.account-creation {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.account-creation:hover {
+    transform: scale(1.02);
+}
+
+/* Heading */
+.account-creation h2 {
+    color: #023047; /* Dark Blue */
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Form Layout */
+.account-creation form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+.account-creation label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #126e82; /* Teal */
+}
+
+/* Input Fields */
+.account-creation input,
+.account-creation select {
+    padding: 12px;
+    width: 90%;
+    border: 2px solid #219ebc; /* Teal border */
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.account-creation input:focus,
+.account-creation select:focus {
+    border-color: #023047; /* Darker border on focus */
+}
+
+/* Create Account Button */
+.create-btn {
+    background: linear-gradient(135deg, #126e82, #023047); /* Modern blue gradient */
+    color: white;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    width: 95%;
+}
+
+.create-btn:hover {
+    background: linear-gradient(135deg, #219ebc, #126e82); /* Brighter on hover */
+    transform: scale(1.05);
+}
