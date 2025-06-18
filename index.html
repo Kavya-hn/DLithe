@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya H N - Portfolio</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #1E3A8A; color: white;">
+        <div style="display: flex; align-items: center;">
+            <img id="profile-pic" src="C:\DLithe\portfolio\kavyahn.jpg" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; cursor: pointer;">
+            <h1 style="margin: 0; font-size: 24px;">Kavya H N</h1>
+        </div>
+        <div>
+            <h2 style="align:center;">PORTFOLIO</h2>
+        </div>
+        <div>
+             <p><h2>Connect with Us</h2></p><br>
+            <a href="https://www.linkedin.com/in/kavya-hn-281360245/" target="_blank" style="margin-right: 10px; color: white; text-decoration: none;">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 30px; height: 30px; vertical-align: middle;"> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" style="margin-right: 10px; color: white; text-decoration: none;">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 30px; height: 30px; vertical-align: middle;"> GitHub
+            </a>
+        </div>
+    </header>
+
+    <section style="text-align: center; padding: 40px;">
+        <h2>About Me</h2>
+        <p style="max-width: 600px; margin: auto;">I'm an Intern at DLithe, eager to pursue an entry-level position in software development. Passionate about coding and problem-solving, I aim to enhance my skills and contribute to a forward-thinking organization.</p>
+    </section>
+
+    <section style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
+        <div style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center;">
+            <h2>Education</h2>
+            <p>BE in Information Science and Engineering</p>
+        </div>
+        <div style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center;">
+            <h2>Certifications</h2>
+            <p>Programming in C (NPTEL)</p>
+            <p>Programming in Java (NPTEL)</p>
+        </div>
+    </section>
+
+    <section style="text-align: center; padding: 40px;">
+        <h2>Skills</h2>
+        <div id="skills" style="display: flex; justify-content: center; gap: 10px;">
+            <span class="skill" style="background: #2563EB; color: white; padding: 10px 20px; border-radius: 5px;">HTML</span>
+            <span class="skill" style="background: #F97316; color: white; padding: 10px 20px; border-radius: 5px;">CSS</span>
+            <span class="skill" style="background: #EAB308; color: black; padding: 10px 20px; border-radius: 5px;">JavaScript</span>
+            <span class="skill" style="background: #9333EA; color: white; padding: 10px 20px; border-radius: 5px;">Java</span>
+        </div>
+    </section>
+
+    <section style="text-align: center; padding: 40px;">
+        <h2>Projects</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div class="project" style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center; cursor: pointer;">
+                <img src="C:\DLithe\portfolio\news.jpeg" alt="News Portal" style="width: 100%; height: auto; border-radius: 10px;">
+                <p><a href="C:\DLithe\news\index.html" style="text-decoration: none; color: black;">News Portal</a></p>
+            </div>
+            <div class="project" style="background: white; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 300px; text-align: center; cursor: pointer;">
+                <img src="C:\DLithe\portfolio\travel.jpeg" alt="Travel Website" style="width: 100%; height: auto; border-radius: 10px;">
+                <p><a href="C:\DLithe\website\index.html" style="text-decoration: none; color: black;">Travel Website</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; padding: 40px; background: #1E3A8A; color: white;">
+        <h2>Contact</h2>
+        <p>&#9990; 8197228526</p>
+        <p>&#9993; kavyakavyahn8@gmail.com</p>
+    </section>
+
+    <script>
+        window.onload = function() {
+            alert('Welcome to my portfolio!');
+        };
+
+        document.getElementById('profile-pic').addEventListener('click', function() {
+            alert('Hello! This is Kavya H N. Thanks for visiting my portfolio.');
+        });
+
+        let skills = document.querySelectorAll('.skill');
+        skills.forEach(skill => {
+            skill.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            skill.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        let projects = document.querySelectorAll('.project');
+        projects.forEach(project => {
+            project.addEventListener('click', function() {
+                alert('You clicked on a project!');
+            });
+        });
+    </script>
+</body>
+</html>
